@@ -24,6 +24,14 @@ function Login() {
             localStorage.setItem('access_token', token);
             navigateTo('/users');
             console.log('Logged in! Token:' + localStorage.getItem('access_token'));
+            axios.get('http://localhost:3000/users')
+            .then((response) => {
+                setUsers(response.data['userData']);
+                console.log(response.data);
+            })
+            .catch((err) => {
+                console.error(err)
+            });
         } catch (error) {
             // Handle login error
             console.error(error);

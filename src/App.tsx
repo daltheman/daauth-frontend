@@ -1,13 +1,12 @@
 import './App.css'
 import AuthProvider from './AuthProvider'
 
-
 function App() {
   return (
     <>
-      <h1>PG Gilsão</h1>
+      <h1>App</h1>
       <AuthProvider />
-    </>
+  </>
   )
 }
 

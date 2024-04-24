@@ -6,10 +6,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import AuthProvider from './AuthProvider.tsx';
+
 import Users from './pages/Users.tsx';
-import Index from './pages/Index.tsx';
 import Login from './pages/Login.tsx';
+
+import EventsCalendar from './pages/EventsCalendar.tsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,12 +19,11 @@ const router = createBrowserRouter([
   {
     path: "/users",
     element: <Users />
-  
   },
   {
-    path: "/index",
-    element: <Index />
-  }
+    path: "/calendar",
+    element: <EventsCalendar />
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
